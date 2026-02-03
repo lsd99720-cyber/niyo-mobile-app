@@ -114,26 +114,67 @@
 // }
 // });
 
-import React from "react";
-import { ScrollView } from "react-native";
-import UserCard from "@/app/components/UserCard";
+// import React from "react";
+// import { ScrollView } from "react-native";
 
-export default function App() {
+// import UserCard from "@/app/(tabs)/UserCrad"
+// export default function HomeScreen() {
+//   return (
+//     <ScrollView>
+//       <UserCard
+//         name="Jane Doe"
+//         avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
+//       />
+//       <UserCard
+//         name="John Smith"
+//         avatarUrl="https://randomuser.me/api/portraits/men/22.jpg"
+//       />
+
+//       <UserCard
+//         name="Alice"
+//         avatarUrl="https://randomuser.me/api/portraits/women/12.jpg"
+//       />
+//     </ScrollView>
+//   );
+// }
+
+// import VaribleCounter from "@/components/VariableCounter";
+// import CounterExample from "@/components/CounterExample";
+// import NameInputExample from "@/components/NameInputExample";
+// import { StyleSheet, View } from "react-native";
+// export default function HomeScreen() {
+//   return (
+//     <View style={styles.container}>
+//       <CounterExample/>
+//       <VaribleCounter/>
+//       <NameInputExample />
+
+//     </View>
+//   );
+// }
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: "center",
+//     alignItems: "center",
+//     gap: 32,
+//   },
+// });
+
+
+import CounterWithStorage from"@/components/CounterWithStorage";
+import { StyleSheet, View } from "react-native";
+export default function HomeScreen() {
   return (
-    <ScrollView>
-      <UserCard
-        name="Jane Doe"
-        avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
-      />
-      <UserCard
-        name="John Smith"
-        avatarUrl="https://randomuser.me/api/portraits/men/22.jpg"
-      />
-
-      <UserCard
-        name="Alice"
-        avatarUrl="https://randomuser.me/api/portraits/women/12.jpg"
-      />
-    </ScrollView>
+    <View style={styles.container}>
+      <CounterWithStorage />
+    </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
